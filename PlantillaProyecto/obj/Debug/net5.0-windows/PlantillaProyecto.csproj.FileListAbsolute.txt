@@ -16,3 +16,30 @@ C:\Users\monte\source\repos\PlantillaProyecto\PlantillaProyecto\obj\Debug\net5.0
 C:\Users\monte\source\repos\PlantillaProyecto\PlantillaProyecto\obj\Debug\net5.0-windows\ref\PlantillaProyecto.dll
 C:\Users\monte\source\repos\PlantillaProyecto\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.pdb
 C:\Users\monte\source\repos\PlantillaProyecto\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.genruntimeconfig.cache
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\PlantillaProyecto.exe
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\PlantillaProyecto.deps.json
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\PlantillaProyecto.runtimeconfig.json
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\PlantillaProyecto.runtimeconfig.dev.json
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\PlantillaProyecto.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\ref\PlantillaProyecto.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\PlantillaProyecto.pdb
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.csproj.AssemblyReference.cache
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.ConsultaInformacion.resources
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.InicioSesion.resources
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.RegistroUsuario.resources
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.RegistroVacuna.resources
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.csproj.GenerateResource.cache
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.AssemblyInfoInputs.cache
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.AssemblyInfo.cs
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.csproj.CoreCompileInputs.cache
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\ref\PlantillaProyecto.dll
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.pdb
+C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.genruntimeconfig.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\monte\\source\\repos\\PlantillaProyecto\\PlantillaProyecto\\PlantillaProyecto.csproj": {}
+    "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\monte\\source\\repos\\PlantillaProyecto\\PlantillaProyecto\\PlantillaProyecto.csproj": {
+    "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\monte\\source\\repos\\PlantillaProyecto\\PlantillaProyecto\\PlantillaProyecto.csproj",
+        "projectUniqueName": "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj",
         "projectName": "PlantillaProyecto",
-        "projectPath": "C:\\Users\\monte\\source\\repos\\PlantillaProyecto\\PlantillaProyecto\\PlantillaProyecto.csproj",
+        "projectPath": "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj",
         "packagesPath": "C:\\Users\\monte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\monte\\source\\repos\\PlantillaProyecto\\PlantillaProyecto\\obj\\",
+        "outputPath": "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\monte\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
