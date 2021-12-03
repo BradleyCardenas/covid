@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj": {}
+    "C:\\Users\\Bradley\\Desktop\\Proyectos\\Proyecto Final\\PlantillaProyecto\\PlantillaProyecto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj": {
+    "C:\\Users\\Bradley\\Desktop\\Proyectos\\Proyecto Final\\PlantillaProyecto\\PlantillaProyecto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj",
+        "projectUniqueName": "C:\\Users\\Bradley\\Desktop\\Proyectos\\Proyecto Final\\PlantillaProyecto\\PlantillaProyecto.csproj",
         "projectName": "PlantillaProyecto",
-        "projectPath": "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\PlantillaProyecto.csproj",
-        "packagesPath": "C:\\Users\\monte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\monte\\Documents\\9 OPTATIVAS\\Programación con Lenguajes Visuales\\Códigos\\TUTORIALGIT\\covid\\PlantillaProyecto\\obj\\",
+        "projectPath": "C:\\Users\\Bradley\\Desktop\\Proyectos\\Proyecto Final\\PlantillaProyecto\\PlantillaProyecto.csproj",
+        "packagesPath": "C:\\Users\\Bradley\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bradley\\Desktop\\Proyectos\\Proyecto Final\\PlantillaProyecto\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\monte\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Bradley\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
@@ -40,6 +44,10 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
@@ -63,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
