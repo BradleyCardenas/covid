@@ -25,7 +25,7 @@ namespace PlantillaProyecto.Objects
 
         public Usuario() { }
         
-        public string Curp { get => curp; set => curp = generateCurp(); }
+        public string Curp { get => curp; set => curp = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Ape_pat { get => ape_pat; set => ape_pat = value; }
@@ -42,11 +42,11 @@ namespace PlantillaProyecto.Objects
         public string EstadoDomicilio { get => estadoDomicilio; set => estadoDomicilio = value; }
 
 
-        private string generateCurp() {
+       // private string generateCurp() {
             //TODO:
             //crear el método de generar CURP
 
-        }
+       // }
 
 
 

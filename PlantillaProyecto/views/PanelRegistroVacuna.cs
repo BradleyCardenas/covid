@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace PlantillaProyecto
 {
-    public partial class RegistroVacuna : Form
+    public partial class PanelRegistroVacuna : Form
     {
         //BRADLEY
         //private SqlConnection conexion = new SqlConnection();
@@ -23,7 +23,7 @@ namespace PlantillaProyecto
         public string[] municipios = new string[106] { "ABALÁ", "ACANCEH", "AKIL", "BACA", "BOKOBÁ", "BUCTZOTZ", "CACALCHÉN", "CALOTMUL", "CANSAHCAB", "CANTAMAYEC", "CELESTÚN", "CENOTILLO", "CONKAL", "CUNCUNUL", "CUZAMÁ", "CHACSINKÍN", "CHANKOM", "CHAPAB", "CHEMAX", "CHICXULUB PUEBLO", "CHICHIMILÁ", "CHIKINDZONOT", "CHOCHOLÁ", "CHUMAYEL", "DZÁN", "DZEMUL", "DZIDZANTÚN", "DZILAM DE BRAVO", "DZILAM GONZÁLEZ", "DZITÁS", "DZONCAUICH", "ESPITA", "HALACHÓ", "HOCABÁ", "HOCTÚN", "HOMÚN", "HUHÍ", "HUNUCMÁ", "IXIL", "IZAMAL", "KANASÍN", "KANTUNIL", "KAUA", "KINCHIL", "KOPOMÁ", "MAMA", "MANÍ", "MAXCANÚ", "MAYAPÁN", "MÉRIDA", "MOCOCHÁ", "MOTUL", "MUNA", "MUXUPIP", "OPICHÉN", "OXKUTZKAB", "PANABÁ", "PETO", "PROGRESO", "QUINTANA ROO", "RÍO LAGARTOS", "SACALUM", "SAMAHIL", "SANAHCAT", "SAN FELIPE", "SANTA ELENA", "SEYÉ", "SINANCHÉ", "SOTUTA", "SUCILÁ", "SUDZAL", "SUMA", "TAHDZIÚ", "TAHMEK", "TEABO", "TECOH", "TEKAL DE VENEGAS", "TEKANTÓ", "TEKAX", "TEKIT", "TEKOM", "TELCHAC PUEBLO", "TELCHAC PUERTO", "TEMAX", "TEMOZÓN", "TEPAKÁN", "TETIZ", "TEYA", "TICUL", "TIMUCUY", "TINUM", "TIXCACALCUPUL", "TIXKOKOB", "TIXMEHUAC", "TIXPÉHUAL", "TIZIMÍN", "TUNKÁS", "TZUCACAB", "UAYMA", "UCÚ", "UMÁN", "VALLADOLID", "XOCCHEL", "YAXCABÁ", "YAXKUKUL", "YOBAÍN"};
         public string[] marcas = new string[6] {"Pfizer", "Astrazeneca", "Sputnik V", "Moderna", "Sinovac", "Cansino"};
         public string[] dosis = new string[4] {"Primera", "Segunda", "Tercera", "Única"};
-        public RegistroVacuna()
+        public PanelRegistroVacuna()
         {
             InitializeComponent();
             llenar_estado();

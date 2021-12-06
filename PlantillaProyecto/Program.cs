@@ -17,7 +17,7 @@ namespace PlantillaProyecto
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegistroUsuario());
+            Application.Run(new InicioSesion());
         }
     }
 }

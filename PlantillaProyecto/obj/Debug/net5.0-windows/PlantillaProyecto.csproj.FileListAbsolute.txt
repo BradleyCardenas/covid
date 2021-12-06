@@ -80,10 +80,7 @@ C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\bin\Debug\ne
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.csproj.AssemblyReference.cache
-C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.ConsultaInformacion.resources
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.InicioSesion.resources
-C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.RegistroUsuario.resources
-C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.RegistroVacuna.resources
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.csproj.GenerateResource.cache
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.AssemblyInfoInputs.cache
@@ -91,3 +88,8 @@ C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\ne
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.csproj.CoreCompileInputs.cache
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.csproj.CopyComplete
 C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.genruntimeconfig.cache
+C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.views.Comprobante.resources
+C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.views.panelRegistroUsuario.resources
+C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.Properties.Resources.resources
+C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.PanelConsultaInformacion.resources
+C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.PanelRegistroVacuna.resources

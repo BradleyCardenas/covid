@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace PlantillaProyecto
 {
-    public partial class ConsultaInformacion : Form
+    public partial class PanelConsultaInformacion : Form
     {
         //BRADLEY
         //private SqlConnection conexion = new SqlConnection();
@@ -19,7 +19,7 @@ namespace PlantillaProyecto
         private SqlConnection conexion = new SqlConnection();
         private SqlCommand comando;
         String sql;
-        public ConsultaInformacion()
+        public PanelConsultaInformacion()
         {
             InitializeComponent();
         }
@@ -28,5 +28,6 @@ namespace PlantillaProyecto
         {
 
         }
+
     }
 }

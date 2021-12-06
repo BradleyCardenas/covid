@@ -7,18 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using PlantillaProyecto.views;
 
 namespace PlantillaProyecto
 {
     public partial class InicioSesion : Form
     {
-        //BRADLEY
-        //private SqlConnection conexion = new SqlConnection();
-        //DANIEL
-        private SqlConnection conexion = new SqlConnection();
-        private SqlCommand comando;
-        String sql;
         public InicioSesion()
         {
             InitializeComponent();
@@ -26,7 +20,24 @@ namespace PlantillaProyecto
 
         private void InicioSesion_Load(object sender, EventArgs e)
         {
-            Text = "Inicio de sesión";
+           
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e){
+            Comprobante comprobante = new Comprobante();
+            this.Hide();
+            comprobante.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e){
+            Comprobante comprobante = new Comprobante();
+            this.Hide();
+            comprobante.Show();
         }
     }
 }

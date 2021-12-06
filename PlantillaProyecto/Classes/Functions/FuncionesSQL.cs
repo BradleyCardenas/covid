@@ -14,10 +14,10 @@ namespace PlantillaProyecto.Classes.Functions
             return peticion.guardarUsuario(usuario);
         }
 
-        public Usuario GetUsuario(int idUsuario) {
+        //public Usuario GetUsuario(int idUsuario) {
             //TODO:
             //Convertir el SqlDataReader en un Usuario
-        }
+        //}
 
 
     }
