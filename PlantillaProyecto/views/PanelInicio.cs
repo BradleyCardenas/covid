@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PlantillaProyecto.views
 {
-    public partial class PanelRegistroUsuario : Form
+    public partial class PanelInicio : Form
     {
-        public PanelRegistroUsuario()
+        public PanelInicio()
         {
             InitializeComponent();
+        }
+
+        private void PanelInicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

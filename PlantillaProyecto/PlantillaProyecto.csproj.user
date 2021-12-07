@@ -4,16 +4,34 @@
     <Compile Update="views\Comprobante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\PanelConsultaInformacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="views\InicioSesion.cs">
+    <Compile Update="views\PanelRegistroDomicilio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="views\PanelRegistroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="views\PanelRegistroVacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="views\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="views\PanelComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="views\PanelInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="views\PanelConsultaInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="views\InicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="views\PanelUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="views\PanelVacuna.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

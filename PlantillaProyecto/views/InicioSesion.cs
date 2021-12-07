@@ -35,9 +35,9 @@ namespace PlantillaProyecto
         }
 
         private void linkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e){
-            Comprobante comprobante = new Comprobante();
+            Registro registro = new Registro();
             this.Hide();
-            comprobante.Show();
+            registro.Show();
         }
     }
 }

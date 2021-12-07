@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PlantillaProyecto.views
 {
-    public partial class PanelRegistroUsuario : Form
+    public partial class PanelRegistroDomicilio : Form
     {
-        public PanelRegistroUsuario()
+        public PanelRegistroDomicilio()
         {
             InitializeComponent();
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

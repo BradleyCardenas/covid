@@ -65,6 +65,7 @@ namespace PlantillaProyecto
             // 
             // txtRestante_consulta
             // 
+            this.txtRestante_consulta.Enabled = false;
             this.txtRestante_consulta.Location = new System.Drawing.Point(369, 165);
             this.txtRestante_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRestante_consulta.Name = "txtRestante_consulta";
@@ -82,6 +83,7 @@ namespace PlantillaProyecto
             // 
             // txtSede_consulta
             // 
+            this.txtSede_consulta.Enabled = false;
             this.txtSede_consulta.Location = new System.Drawing.Point(22, 217);
             this.txtSede_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSede_consulta.Name = "txtSede_consulta";
@@ -99,6 +101,7 @@ namespace PlantillaProyecto
             // 
             // dateCita_consulta
             // 
+            this.dateCita_consulta.Enabled = false;
             this.dateCita_consulta.Location = new System.Drawing.Point(22, 165);
             this.dateCita_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateCita_consulta.Name = "dateCita_consulta";
@@ -116,6 +119,7 @@ namespace PlantillaProyecto
             // 
             // txtNombre_consulta
             // 
+            this.txtNombre_consulta.Enabled = false;
             this.txtNombre_consulta.Location = new System.Drawing.Point(22, 97);
             this.txtNombre_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre_consulta.Name = "txtNombre_consulta";
@@ -133,6 +137,7 @@ namespace PlantillaProyecto
             // 
             // txtFolio_consulta
             // 
+            this.txtFolio_consulta.Enabled = false;
             this.txtFolio_consulta.Location = new System.Drawing.Point(414, 48);
             this.txtFolio_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFolio_consulta.Name = "txtFolio_consulta";
@@ -158,7 +163,7 @@ namespace PlantillaProyecto
             this.label3.TabIndex = 38;
             this.label3.Text = "CONSULTAR INFORMACIÓN";
             // 
-            // ConsultaInformacion
+            // PanelConsultaInformacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,7 +172,7 @@ namespace PlantillaProyecto
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ConsultaInformacion";
+            this.Name = "PanelConsultaInformacion";
             this.Text = "ConsultaInformacion";
             this.Load += new System.EventHandler(this.ConsultaInformacion_Load);
             this.groupBox1.ResumeLayout(false);

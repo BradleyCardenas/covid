@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace PlantillaProyecto.views
 {
-    public partial class PanelRegistroUsuario : Form
+    public partial class PanelComprobante : Form
     {
-        public PanelRegistroUsuario()
+        public PanelComprobante()
         {
             InitializeComponent();
+        }
+
+        private void PanelComprobante_Load(object sender, EventArgs e){
+
         }
     }
 }

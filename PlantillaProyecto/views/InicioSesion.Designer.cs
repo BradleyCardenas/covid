@@ -89,6 +89,7 @@ namespace PlantillaProyecto
             this.txtCorreo_login.Location = new System.Drawing.Point(38, 101);
             this.txtCorreo_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo_login.Name = "txtCorreo_login";
+            this.txtCorreo_login.PasswordChar = '*';
             this.txtCorreo_login.Size = new System.Drawing.Size(241, 23);
             this.txtCorreo_login.TabIndex = 9;
             // 

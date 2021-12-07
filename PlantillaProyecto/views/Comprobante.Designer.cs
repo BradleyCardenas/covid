@@ -46,6 +46,7 @@ namespace PlantillaProyecto.views
             this.btn_inicio.TabIndex = 0;
             this.btn_inicio.Text = "Inicio";
             this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // btn_registroUsuario
             // 
@@ -85,6 +86,7 @@ namespace PlantillaProyecto.views
             this.btn_comprobante.TabIndex = 4;
             this.btn_comprobante.Text = "Comprobante";
             this.btn_comprobante.UseVisualStyleBackColor = true;
+            this.btn_comprobante.Click += new System.EventHandler(this.btn_comprobante_Click);
             // 
             // btn_salir
             // 

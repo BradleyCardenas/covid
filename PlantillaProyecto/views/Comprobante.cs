@@ -17,12 +17,8 @@ namespace PlantillaProyecto.views
             InitializeComponent();
         }
 
-        private void Comprobante_Load(object sender, EventArgs e)
+        private void abrirForm(object formulario)
         {
-
-        }
-
-        private void abrirForm(object formulario) {
             if (pnl_principal.Controls.Count > 0)
                 pnl_principal.Controls.RemoveAt(0);
 
@@ -34,6 +30,10 @@ namespace PlantillaProyecto.views
             fr.Show();
         }
 
+        private void Comprobante_Load(object sender, EventArgs e){
+            abrirForm(new PanelInicio());
+        }
+
         private void btn_salir_Click(object sender, EventArgs e){
             InicioSesion fr = new InicioSesion();
             fr.Show();
@@ -41,16 +41,26 @@ namespace PlantillaProyecto.views
         }
 
         private void btn_registroUsuario_Click(object sender, EventArgs e){
-            abrirForm(new panelRegistroUsuario());
+            abrirForm(new PanelUsuario());
         }
 
         private void btn_registrVacuna_Click(object sender, EventArgs e)
         {
-            abrirForm(new PanelRegistroVacuna());
+            abrirForm(new PanelVacuna());
         }
 
         private void btn_consultaInformacion_Click(object sender, EventArgs e){
             abrirForm(new PanelConsultaInformacion());
+        }
+
+        private void btn_comprobante_Click(object sender, EventArgs e)
+        {
+            abrirForm(new PanelComprobante());
+        }
+
+        private void btn_inicio_Click(object sender, EventArgs e)
+        {
+            abrirForm(new PanelInicio());
         }
     }
 }
