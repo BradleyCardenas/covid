@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace PlantillaProyecto.Objects
 {
     class Usuario{
+        int id;
         string curp;
         string correo;
         string nombre;
@@ -25,6 +26,7 @@ namespace PlantillaProyecto.Objects
 
         public Usuario() { }
         
+        public int Id { get => id; set => id = value; }
         public string Curp { get => curp; set => curp = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Nombre { get => nombre; set => nombre = value; }

@@ -10,7 +10,10 @@ using PlantillaProyecto.Objects;
 namespace PlantillaProyecto.Classes
 {
     class PeticionSQL{
-        SqlConnection conexion = new SqlConnection("Server = Edwin-LenguajeV; Database=Covid;Trusted_Connection=True");
+        //Bradley
+        //SqlConnection conexion = new SqlConnection("Server = Edwin-LenguajeV; Database=Covid;Trusted_Connection=True");
+        //Daniel
+        SqlConnection conexion = new SqlConnection("server=DESKTOP-FKGSU3G; database=Covid; integrated security=true;");
         SqlCommand comando;
         string sql;
 
@@ -81,6 +84,97 @@ namespace PlantillaProyecto.Classes
             }
             
             return resultado;
+        }
+
+        public List<string> listaMunicipios(int idEstado)
+        {
+            SqlDataReader resultadoMunicipio;
+            List<string> lista = new List<string>();
+            try
+            {
+                sql = "SELECT Municipio FROM Municipios WHERE idEstado = " + idEstado + ";";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
+                resultadoMunicipio = comando.ExecuteReader();               
+                while (resultadoMunicipio.Read())
+                {
+                    lista.Add(resultadoMunicipio["Municipio"].ToString());
+                }
+                conexion.Close();
+            }
+            catch
+            {
+                lista = null;
+            }
+            return lista;
+        }
+        public List<string> listaEstados()
+        {
+            SqlDataReader resultadoEstado;
+            List<string> lista = new List<string>();
+            try
+            {
+                sql = "SELECT Estado FROM Estados;";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
+                resultadoEstado = comando.ExecuteReader();               
+                while (resultadoEstado.Read())
+                {
+                    lista.Add(resultadoEstado["Estado"].ToString());
+                }
+                conexion.Close();
+            }
+            catch
+            {
+                lista = null;
+            }
+            return lista;
+        }
+
+        public List<string> listaVacunas()
+        {
+            SqlDataReader resultadoVacuna;
+            List<string> lista = new List<string>();
+            try
+            {
+                sql = "SELECT Nombre FROM Marcas;";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
+                resultadoVacuna = comando.ExecuteReader();
+                while (resultadoVacuna.Read())
+                {
+                    lista.Add(resultadoVacuna["Nombre"].ToString());
+                }
+                conexion.Close();
+            }
+            catch
+            {
+                lista = null;
+            }
+            return lista;
+        }
+
+        public List<string> listaDosis()
+        {
+            SqlDataReader resultadoDosis;
+            List<string> lista = new List<string>();
+            try
+            {
+                sql = "SELECT Tipo FROM Dosis;";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
+                resultadoDosis = comando.ExecuteReader();
+                while (resultadoDosis.Read())
+                {
+                    lista.Add(resultadoDosis["Tipo"].ToString());
+                }
+                conexion.Close();
+            }
+            catch
+            {
+                lista = null;
+            }
+            return lista;
         }
     }
 }
