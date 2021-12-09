@@ -106,7 +106,95 @@ namespace PlantillaProyecto.Classes
             return estatus;
         }
 
+        public bool editarUsuario(Usuario usuario)
+        {
+            bool estatus = true;
+            try
+            {
+                sql = "UPDATE Usuarios SET(curp, correo, nombre, ape_pat, ape_mat, sexo, fecha_nacimiento, nacionalidad, estado_nacimiento) VALUES(@curp, @correo ,@nombre, @ape_pat, @ape_mat, @sexo, @fecha_nacimiento, @nacionalidad, @estado_nacimiento, @contacto, @direccion, @colonia, @cod_postal, @municipio, @estado_domicilio) WHERE idUsuario = '" + usuario.Id + "'";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
 
+                comando.Parameters.Add("@curp", SqlDbType.VarChar);
+                comando.Parameters.Add("@correo", SqlDbType.VarChar);
+                comando.Parameters.Add("@nombre", SqlDbType.VarChar);
+                comando.Parameters.Add("@ape_pat", SqlDbType.VarChar);
+                comando.Parameters.Add("@ape_mat", SqlDbType.VarChar);
+                comando.Parameters.Add("@sexo", SqlDbType.VarChar);
+                comando.Parameters.Add("@fecha_nacimiento", SqlDbType.DateTime);
+                comando.Parameters.Add("@nacionalidad", SqlDbType.VarChar);
+                comando.Parameters.Add("@estado_nacimiento", SqlDbType.VarChar);
+                comando.Parameters.Add("@contacto", SqlDbType.VarChar);
+                comando.Parameters.Add("@direccion", SqlDbType.VarChar);
+                comando.Parameters.Add("@colonia", SqlDbType.VarChar);
+                comando.Parameters.Add("@cod_postal", SqlDbType.VarChar);
+                comando.Parameters.Add("@municipio", SqlDbType.VarChar);
+                comando.Parameters.Add("@estado_domicilio", SqlDbType.VarChar);
+
+                comando.Parameters["@curp"].Value = usuario.generateCurp();
+                comando.Parameters["@correo"].Value = usuario.Correo;
+                comando.Parameters["@nombre"].Value = usuario.Nombre;
+                comando.Parameters["@ape_pat"].Value = usuario.Ape_pat;
+                comando.Parameters["@ape_mat"].Value = usuario.Ape_mat;
+                comando.Parameters["@sexo"].Value = usuario.Sexo;
+                comando.Parameters["@fecha_nacimiento"].Value = usuario.FechaNacimiento;
+                comando.Parameters["@nacionalidad"].Value = usuario.Nacionalidad;
+                comando.Parameters["@estado_nacimiento"].Value = usuario.EstadoNacimiento;
+                comando.Parameters["@contacto"].Value = usuario.Contacto;
+                comando.Parameters["@direccion"].Value = usuario.Direccion;
+                comando.Parameters["@colonia"].Value = usuario.Colonia;
+                comando.Parameters["@cod_postal"].Value = usuario.CodPostal;
+                comando.Parameters["@municipio"].Value = usuario.Municipio;
+                comando.Parameters["@estado_domicilio"].Value = usuario.EstadoDomicilio;
+
+                comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            catch (InvalidCastException e)
+            {
+                MessageBox.Show(e.ToString());
+                estatus = false;
+            }
+
+            return estatus;
+        }
+
+        public bool editarDomicilioUsuario(Usuario usuario)
+        {
+            bool estatus = true;
+            try
+            {
+                sql = "UPDATE Usuarios SET(contacto, direccion, colonia, cod_postal, municipio, estado_domicilio) VALUES(@contacto, @direccion, @colonia, @cod_postal, @municipio, @estado_domicilio) WHERE idUsuario = '" + usuario.Id + "'";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
+
+                comando.Parameters.Add("@contacto", SqlDbType.VarChar);
+                comando.Parameters.Add("@direccion", SqlDbType.VarChar);
+                comando.Parameters.Add("@colonia", SqlDbType.VarChar);
+                comando.Parameters.Add("@cod_postal", SqlDbType.VarChar);
+                comando.Parameters.Add("@municipio", SqlDbType.VarChar);
+                comando.Parameters.Add("@estado_domicilio", SqlDbType.VarChar);
+
+                comando.Parameters["@contacto"].Value = usuario.Contacto;
+                comando.Parameters["@direccion"].Value = usuario.Direccion;
+                comando.Parameters["@colonia"].Value = usuario.Colonia;
+                comando.Parameters["@cod_postal"].Value = usuario.CodPostal;
+                comando.Parameters["@municipio"].Value = usuario.Municipio;
+                comando.Parameters["@estado_domicilio"].Value = usuario.EstadoDomicilio;
+
+                comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            catch (InvalidCastException e)
+            {
+                MessageBox.Show(e.ToString());
+                estatus = false;
+            }
+
+            return estatus;
+        }
         public Usuario traerUsuario(string curp, string correo){
             SqlDataReader resultado;
             Usuario usuario = new Usuario();
@@ -160,7 +248,6 @@ namespace PlantillaProyecto.Classes
                     vacuna.Sede = resultadoVacuna["Sede"].ToString();
                 }
                 conexion.Close();
-
             }
             catch
             {

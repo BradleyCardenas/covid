@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlantillaProyecto.views;
+using PlantillaProyecto.Classes.Objects;
+using PlantillaProyecto.Objects;
 
 namespace PlantillaProyecto.views
 {
     public partial class Comprobante : Form
     {
+        public Usuario usuarioLog = new Usuario();
+        public Vacuna vacunaLog = new Vacuna();
         public Comprobante()
         {
             InitializeComponent();

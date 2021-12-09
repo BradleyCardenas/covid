@@ -113,6 +113,7 @@ namespace PlantillaProyecto.views
             this.btnRegistro_registro.TabIndex = 67;
             this.btnRegistro_registro.Text = "Modificar";
             this.btnRegistro_registro.UseVisualStyleBackColor = true;
+            this.btnRegistro_registro.Click += new System.EventHandler(this.btnRegistro_registro_Click);
             // 
             // comboEstado_registro
             // 

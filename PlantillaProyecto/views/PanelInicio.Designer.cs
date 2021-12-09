@@ -47,9 +47,10 @@ namespace PlantillaProyecto.views
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 79);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 52);
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
             // 
@@ -57,9 +58,10 @@ namespace PlantillaProyecto.views
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 109);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 145);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox2.Size = new System.Drawing.Size(46, 52);
             this.pictureBox2.TabIndex = 62;
             this.pictureBox2.TabStop = false;
             // 
@@ -67,9 +69,10 @@ namespace PlantillaProyecto.views
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 157);
+            this.pictureBox3.Location = new System.Drawing.Point(14, 209);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox3.Size = new System.Drawing.Size(46, 52);
             this.pictureBox3.TabIndex = 63;
             this.pictureBox3.TabStop = false;
             // 
@@ -77,9 +80,10 @@ namespace PlantillaProyecto.views
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 206);
+            this.pictureBox4.Location = new System.Drawing.Point(14, 275);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox4.Size = new System.Drawing.Size(46, 52);
             this.pictureBox4.TabIndex = 64;
             this.pictureBox4.TabStop = false;
             // 
@@ -87,9 +91,9 @@ namespace PlantillaProyecto.views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(248, 120);
+            this.label1.Location = new System.Drawing.Point(283, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 54);
+            this.label1.Size = new System.Drawing.Size(292, 67);
             this.label1.TabIndex = 65;
             this.label1.Text = "Bienvenido";
             // 
@@ -97,28 +101,27 @@ namespace PlantillaProyecto.views
             // 
             this.txt_nombre.AutoSize = true;
             this.txt_nombre.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_nombre.Location = new System.Drawing.Point(307, 174);
+            this.txt_nombre.Location = new System.Drawing.Point(351, 232);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(85, 28);
+            this.txt_nombre.Size = new System.Drawing.Size(0, 35);
             this.txt_nombre.TabIndex = 66;
-            this.txt_nombre.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(176, 263);
+            this.label2.Location = new System.Drawing.Point(201, 351);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 19);
+            this.label2.Size = new System.Drawing.Size(451, 23);
             this.label2.TabIndex = 67;
             this.label2.Text = "Las opciones que puede usar se encuentran a la izquierda";
             // 
             // PanelInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(757, 457);
+            this.ClientSize = new System.Drawing.Size(865, 609);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.label1);
@@ -127,6 +130,7 @@ namespace PlantillaProyecto.views
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PanelInicio";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.PanelInicio_Load);
@@ -147,7 +151,7 @@ namespace PlantillaProyecto.views
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label txt_nombre;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label txt_nombre;
     }
 }

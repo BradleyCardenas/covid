@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace PlantillaProyecto.Objects
 {
-    class Usuario{
+    public class Usuario{
         int id;
         string curp;
         string correo;

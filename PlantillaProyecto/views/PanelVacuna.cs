@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using PlantillaProyecto.Classes;
+using PlantillaProyecto.views;
+using PlantillaProyecto.Objects;
+using PlantillaProyecto.Classes.Objects;
+
 
 
 namespace PlantillaProyecto
@@ -16,6 +20,8 @@ namespace PlantillaProyecto
     public partial class PanelVacuna : Form
     {
         PeticionSQL funciones = new PeticionSQL();
+        Comprobante comprobante = new Comprobante();
+
         public PanelVacuna()
         {
             InitializeComponent();
@@ -23,8 +29,6 @@ namespace PlantillaProyecto
 
         private void RegistroVacuna_Load(object sender, EventArgs e)
         {
-            comboMarca_vacuna.DataSource = funciones.listaVacunas();
-            comboDosis_vacuna.DataSource = funciones.listaDosis();
             comboEstado_vacuna.DataSource = funciones.listaEstados();
         }
         private void comboEstado_vacuna_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,16 +48,6 @@ namespace PlantillaProyecto
             else if (txtTel2_vacuna.TextLength < 10)
             {
                 msg = "Te hace falta colocar un segundo teléfono";
-                validar = false;
-            }
-            else if (comboMarca_vacuna.SelectedIndex < 0)
-            {
-                msg = "Te hace falta seleccionar una marca de vacuna";
-                validar = false;
-            }
-            else if (comboDosis_vacuna.SelectedIndex < 0)
-            {
-                msg = "Te hace falta seleccionar la dosis de la vacuna";
                 validar = false;
             }
             else if (txtCalle_vacuna.TextLength == 0)
@@ -101,8 +95,21 @@ namespace PlantillaProyecto
         {
             if (validar_vacios())
             {
-
+                funciones.editarDomicilioUsuario(comprobante.usuarioLog);
             }
+        }
+
+        public void llenar_datosdomicilio(Usuario log)
+        {
+            txtTel1_vacuna.Text = log.Contacto.ToString();
+            txtTel2_vacuna.Text = log.Contacto.ToString();
+            txtCalle_vacuna.Text = log.Direccion.ToString();
+            
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlantillaProyecto.Classes.Objects
 {
-    class Vacuna{
+    public class Vacuna{
         string marca;
         string dosis;
         DateTime fecha_vacuna;
