@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlantillaProyecto.Classes.Objects;
+using PlantillaProyecto.Objects;
 
 namespace PlantillaProyecto.views
 {
@@ -31,10 +33,12 @@ namespace PlantillaProyecto.views
         }
 
         int estado = 0;
+        PanelRegistroUsuario panelRegistroUsuario = new PanelRegistroUsuario();
+        PanelRegistroDomicilio panelRegistroDomicilio = new PanelRegistroDomicilio();
+        PanelRegistroVacuna panelRegistroVacuna = new PanelRegistroVacuna();
 
-        private void Registro_Load(object sender, EventArgs e)
-        {
-            abrirForm(new PanelRegistroUsuario());
+        private void Registro_Load(object sender, EventArgs e){
+            abrirForm(panelRegistroUsuario);
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e){
@@ -46,22 +50,30 @@ namespace PlantillaProyecto.views
             cambiarEstadoSiguiente();
         }
 
+
+        Usuario usuario = new Usuario();
         private void cambiarEstadoSiguiente() {
             switch (estado) {
                 case 0:
-                    estado++;
-                    abrirForm(new PanelRegistroDomicilio());
-                    btn_cancelar.Text = "Anterior";
+                    if (!panelRegistroUsuario.hayCamposVacios()) {
+                        estado++;
+                        abrirForm(panelRegistroDomicilio);
+                        btn_cancelar.Text = "Anterior";
+                    }
                     break;
                 case 1:
-                    estado++;
-                    abrirForm(new PanelRegistroVacuna());
-                    btn_siguiente.Text = "Guardar";
+                    if (!panelRegistroDomicilio.hayCamposVacios()) {
+                        estado++;
+                        abrirForm(panelRegistroVacuna);
+                        btn_siguiente.Text = "Guardar";
+                    }
                     break;
                 case 2:
-                    Comprobante comprobante = new Comprobante();
-                    this.Hide();
-                    comprobante.Show();
+                    if (!panelRegistroVacuna.hayCamposVacios()) {
+                        Comprobante comprobante = new Comprobante();
+                        this.Hide();
+                        comprobante.Show();
+                    }
                     break;
 
             }
@@ -76,15 +88,52 @@ namespace PlantillaProyecto.views
                     break;
                 case 1:
                     estado--;
-                    abrirForm(new PanelRegistroUsuario());
+                    abrirForm(panelRegistroUsuario);
                     btn_cancelar.Text = "Cancelar";
                     break;
                 case 2:
                     estado--;
-                    abrirForm(new PanelRegistroDomicilio());
+                    abrirForm(panelRegistroDomicilio);
                     btn_siguiente.Text = "Siguiente";
                     break;
             }
+        }
+
+        private Usuario obtenerUsuario() {
+            Usuario usuario = new Usuario();
+
+            if (!panelRegistroUsuario.hayCamposVacios() && !panelRegistroDomicilio.hayCamposVacios() && !panelRegistroVacuna.hayCamposVacios()){
+                usuario.Nombre = panelRegistroUsuario.txt_nombre.Text;
+                usuario.Ape_pat = panelRegistroUsuario.txt_apePat.Text;
+                usuario.Ape_mat = panelRegistroUsuario.txt_apeMat.Text;
+                usuario.Sexo = panelRegistroUsuario.obtenerSexo();
+                usuario.FechaNacimiento = panelRegistroUsuario.dateNacimiento_registro.Value;
+                usuario.Nacionalidad = panelRegistroUsuario.comboEstado_registro.Text;
+                usuario.Correo = panelRegistroUsuario.txtCorreo_registro.Text;
+                usuario.EstadoNacimiento = panelRegistroUsuario.comboEstado_registro.Text;
+
+                usuario.Direccion = "Calle: " + panelRegistroDomicilio.txtCalle_vacuna.Text + " Num.Interior: " + panelRegistroDomicilio.txtInterior_vacuna + " Num.Exterior: " + panelRegistroDomicilio.txtExterior_vacuna;
+                usuario.Colonia = panelRegistroDomicilio.txtColonia_vacuna.Text;
+                usuario.CodPostal = panelRegistroDomicilio.txt_codPostal.Text;
+                usuario.EstadoDomicilio = panelRegistroDomicilio.comboEstado_vacuna.Text;
+                usuario.Municipio = panelRegistroDomicilio.comboMunicipio_vacuna.Text;
+                
+                usuario.Contacto = "Tel1: " + panelRegistroVacuna.txtTel1_vacuna.Text + " Tel2: " + panelRegistroVacuna.txtTel2_vacuna.Text;
+            }
+            return usuario;
+        }
+
+        private Vacuna obtenerVacuna() {
+            Vacuna vacuna = new Vacuna();
+            if (!panelRegistroVacuna.hayCamposVacios()){
+                vacuna.Marca = panelRegistroVacuna.comboMarca_vacuna.Text;
+                vacuna.Dosis = panelRegistroVacuna.comboDosis_vacuna.Text;
+                vacuna.Sede = "Centro de salud";
+                vacuna.Fecha_vacuna = DateTime.Now.AddDays(15);
+
+            }
+
+            return vacuna;
         }
 
     }

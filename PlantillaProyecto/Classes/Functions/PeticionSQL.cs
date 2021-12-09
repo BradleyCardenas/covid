@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using PlantillaProyecto.Objects;
+using PlantillaProyecto.Classes.Objects;
 
 namespace PlantillaProyecto.Classes
 {
     class PeticionSQL{
         //Bradley
-        //SqlConnection conexion = new SqlConnection("Server = Edwin-LenguajeV; Database=Covid;Trusted_Connection=True");
+        SqlConnection conexion = new SqlConnection("Server = Edwin-LenguajeV; Database=Covid;Trusted_Connection=True");
         //Daniel
-        SqlConnection conexion = new SqlConnection("server=DESKTOP-FKGSU3G; database=Covid; integrated security=true;");
+        //SqlConnection conexion = new SqlConnection("server=DESKTOP-FKGSU3G; database=Covid; integrated security=true;");
         SqlCommand comando;
         string sql;
 
@@ -63,6 +64,41 @@ namespace PlantillaProyecto.Classes
 
             }
             catch {
+                estatus = false;
+            }
+
+            return estatus;
+        }
+
+        public bool guardarVacuna(Vacuna vacuna)
+        {
+            bool estatus = true;
+
+            try
+            {
+                sql = "INSERT INTO Empleados(idUsuario, Marca, Dosis, Fecha_vacuna, Sede) VALUES(@idUsuario, @marca, @dosis, @Fecha_vacuna, @sede)";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
+
+                comando.Parameters.Add("@idUsuario", SqlDbType.VarChar);
+                comando.Parameters.Add("@marca", SqlDbType.VarChar);
+                comando.Parameters.Add("@dosis", SqlDbType.VarChar);
+                comando.Parameters.Add("@Fecha_vacuna", SqlDbType.DateTime);
+                comando.Parameters.Add("@sede", SqlDbType.VarChar);
+
+
+                //comando.Parameters["@idUsuario"].Value = vacuna.idUsu;
+                comando.Parameters["@marca"].Value = vacuna.Marca;
+                comando.Parameters["@dosis"].Value = vacuna.Dosis;
+                comando.Parameters["@Fecha_vacuna"].Value = vacuna.Fecha_vacuna;
+                comando.Parameters["@sede"].Value = vacuna.Sede;
+
+                comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            catch
+            {
                 estatus = false;
             }
 

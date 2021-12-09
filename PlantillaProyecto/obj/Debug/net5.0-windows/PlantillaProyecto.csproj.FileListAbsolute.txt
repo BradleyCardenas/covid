@@ -127,3 +127,4 @@ C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códig
 C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.views.PanelUsuario.resources
 C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.PanelVacuna.resources
 C:\Users\monte\Documents\9 OPTATIVAS\Programación con Lenguajes Visuales\Códigos\TUTORIALGIT\covid\PlantillaProyecto\obj\Debug\net5.0-windows\PlantillaProyecto.views.Registro.resources
+C:\Users\Bradley\Desktop\Proyectos\Proyecto Final\PlantillaProyecto\bin\Debug\net5.0-windows\System.Memory.Data.dll

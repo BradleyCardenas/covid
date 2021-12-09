@@ -19,14 +19,51 @@ namespace PlantillaProyecto.views
             InitializeComponent();
         }
 
-        private void comboEstado_registro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void PanelRegistroUsuario_Load(object sender, EventArgs e)
         {
             comboEstado_registro.DataSource = funciones.listaEstados();
+            rbtnMasculino_registro.Checked = true;
         }
+
+        public bool hayCamposVacios() {
+            string text = "";
+            bool hayCamposVacios = false;
+
+            foreach (Control control in Controls) {
+                if (control.Text.Length == 0) {
+                    text = "El campo " + control.Name + " está vacío";
+                    hayCamposVacios = true;
+                }
+            }
+
+            if (comboNacion_registro.SelectedIndex < 0)
+            {
+                text = "El campo Nacionalidad está vacío";
+                hayCamposVacios = true;
+            }
+            else if(comboEstado_registro.SelectedIndex < 0){
+                text = "El campo Estado está vacío";
+                hayCamposVacios = true;
+            }
+
+            if (hayCamposVacios) {
+                MessageBox.Show(text);
+            }
+
+            return hayCamposVacios;
+        }
+
+        public char obtenerSexo() { 
+            Char sexo;
+
+            if (rbtnMasculino_registro.Checked){
+                sexo = 'M';
+            }
+            else {
+                sexo = 'F';
+            }
+            return sexo;
+        }
+
     }
 }

@@ -24,5 +24,31 @@ namespace PlantillaProyecto.views
             comboMarca_vacuna.DataSource = funciones.listaVacunas();
             comboDosis_vacuna.DataSource = funciones.listaDosis();
         }
+
+        public bool hayCamposVacios() {
+            bool hayCamposVacios = false;
+            string text = "";
+
+            foreach (Control control in Controls) {
+                if (control.Text.Length == 0) {
+                    text = "El campo " + control.Name +" está vacío";
+                }
+            }
+
+            if (comboDosis_vacuna.SelectedIndex < 0){
+                text = "El campo Dosis está vacío";
+                hayCamposVacios = true;
+            }
+            else if (comboMarca_vacuna.SelectedIndex < 0) {
+                text = "El campo Marca está vacío";
+                hayCamposVacios = true;
+            }
+
+            if (hayCamposVacios) {
+                MessageBox.Show(text);
+            }
+
+            return hayCamposVacios;
+        }
     }
 }
