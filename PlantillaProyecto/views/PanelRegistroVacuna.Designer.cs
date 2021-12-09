@@ -79,6 +79,11 @@ namespace PlantillaProyecto.views
             // comboDosis_vacuna
             // 
             this.comboDosis_vacuna.FormattingEnabled = true;
+            this.comboDosis_vacuna.Items.AddRange(new object[] {
+            "Primera",
+            "Segunda",
+            "Tercera",
+            "Única"});
             this.comboDosis_vacuna.Location = new System.Drawing.Point(77, 52);
             this.comboDosis_vacuna.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboDosis_vacuna.Name = "comboDosis_vacuna";
