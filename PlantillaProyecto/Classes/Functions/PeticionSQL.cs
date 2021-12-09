@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using PlantillaProyecto.Objects;
 using PlantillaProyecto.Classes.Objects;
+using System.Windows.Forms;
 
 namespace PlantillaProyecto.Classes
 {
@@ -23,7 +24,7 @@ namespace PlantillaProyecto.Classes
 
             try
             {
-                sql = "INSERT INTO Empleados(curp, correo, nombre, ape_pat, ape_mat, sexo, fecha_nacimiento, nacionalidad, estado_nacimiento, contacto, direccion, colonia, cod_postal, municipio, estado_domicilio) VALUES(@nombre, @ape_pat, @ape_mat, @sexo, @fecha_nacimiento, @nacionalidad, @estado_nacimiento, @contacto, @direccion, @colonia, @cod_postal, @municipio, @estado_domicilio)";
+                sql = "INSERT INTO Usuarios(curp, correo, nombre, ape_pat, ape_mat, sexo, fecha_nacimiento, nacionalidad, estado_nacimiento, contacto, direccion, colonia, cod_postal, municipio, estado_domicilio) VALUES(@curp, @correo ,@nombre, @ape_pat, @ape_mat, @sexo, @fecha_nacimiento, @nacionalidad, @estado_nacimiento, @contacto, @direccion, @colonia, @cod_postal, @municipio, @estado_domicilio)";
                 conexion.Open();
                 comando = new SqlCommand(sql, conexion);
 
@@ -43,7 +44,7 @@ namespace PlantillaProyecto.Classes
                 comando.Parameters.Add("@municipio", SqlDbType.VarChar);
                 comando.Parameters.Add("@estado_domicilio", SqlDbType.VarChar);
 
-                comando.Parameters["@curp"].Value = usuario.Curp;
+                comando.Parameters["@curp"].Value = usuario.generateCurp();
                 comando.Parameters["@correo"].Value = usuario.Correo;
                 comando.Parameters["@nombre"].Value = usuario.Nombre;
                 comando.Parameters["@ape_pat"].Value = usuario.Ape_pat;
@@ -63,20 +64,20 @@ namespace PlantillaProyecto.Classes
                 conexion.Close();
 
             }
-            catch {
+            catch (InvalidCastException e) {
+                MessageBox.Show(e.ToString());
                 estatus = false;
             }
 
             return estatus;
         }
 
-        public bool guardarVacuna(Vacuna vacuna)
-        {
+        public bool guardarVacuna(Vacuna vacuna, string correo, string curp){
             bool estatus = true;
-
+            Usuario usuario = traerUsuario(curp, correo);
             try
             {
-                sql = "INSERT INTO Empleados(idUsuario, Marca, Dosis, Fecha_vacuna, Sede) VALUES(@idUsuario, @marca, @dosis, @Fecha_vacuna, @sede)";
+                sql = "INSERT INTO Registro_vacuna(idUsuario, Marca, Dosis, Fecha_vacuna, Sede) VALUES(@idUsuario, @marca, @dosis, @Fecha_vacuna, @sede)";
                 conexion.Open();
                 comando = new SqlCommand(sql, conexion);
 
@@ -87,7 +88,7 @@ namespace PlantillaProyecto.Classes
                 comando.Parameters.Add("@sede", SqlDbType.VarChar);
 
 
-                //comando.Parameters["@idUsuario"].Value = vacuna.idUsu;
+                comando.Parameters["@idUsuario"].Value = usuario.Id;
                 comando.Parameters["@marca"].Value = vacuna.Marca;
                 comando.Parameters["@dosis"].Value = vacuna.Dosis;
                 comando.Parameters["@Fecha_vacuna"].Value = vacuna.Fecha_vacuna;
@@ -97,29 +98,76 @@ namespace PlantillaProyecto.Classes
                 conexion.Close();
 
             }
-            catch
-            {
+            catch (InvalidCastException e) {
+                MessageBox.Show(e.ToString());
                 estatus = false;
             }
 
             return estatus;
         }
 
-        public SqlDataReader traerUsuario(int idUsuario){
+
+        public Usuario traerUsuario(string curp, string correo){
             SqlDataReader resultado;
+            Usuario usuario = new Usuario();
             try{
-                sql = "SELECT * FROM Usuarios WHERE idUsuario = " + idUsuario +";";
+                sql = "SELECT * FROM Usuarios WHERE curp = '" + curp +"' AND correo = '" + correo + "';";
                 conexion.Open();
                 comando = new SqlCommand(sql, conexion);
                 resultado = comando.ExecuteReader();
+                while (resultado.Read()){
+                    usuario.Id = int.Parse(resultado["idUsuario"].ToString());
+                    usuario.Nombre = resultado["nombre"].ToString();
+                    usuario.Correo = resultado["correo"].ToString();
+                    usuario.Ape_pat = resultado["ape_pat"].ToString();
+                    usuario.Ape_mat = resultado["ape_mat"].ToString();
+                    usuario.Sexo = char.Parse(resultado["sexo"].ToString());
+                    usuario.FechaNacimiento = DateTime.Parse(resultado["fecha_nacimiento"].ToString());
+                    usuario.Nacionalidad = resultado["nacionalidad"].ToString();
+                    usuario.EstadoNacimiento = resultado["estado_nacimiento"].ToString();
+                    usuario.Contacto = resultado["contacto"].ToString();
+                    usuario.Direccion = resultado["direccion"].ToString();
+                    usuario.Colonia = resultado["colonia"].ToString();
+                    usuario.CodPostal = resultado["cod_postal"].ToString();
+                    usuario.Municipio = resultado["municipio"].ToString();
+                    usuario.EstadoDomicilio = resultado["estado_domicilio"].ToString();
+                }
                 conexion.Close();
              
             }
             catch {
-                resultado = null;
+                usuario = null;
             }
             
-            return resultado;
+            return usuario;
+        }
+
+        public Vacuna traerVacuna(int idUsuario)
+        {
+            SqlDataReader resultadoVacuna;
+            Vacuna vacuna = new Vacuna();
+            try
+            {
+                sql = "SELECT * FROM Registro_vacuna WHERE idUsuario = '" + idUsuario + "';";
+                conexion.Open();
+                comando = new SqlCommand(sql, conexion);
+                resultadoVacuna = comando.ExecuteReader();
+                while (resultadoVacuna.Read())
+                {
+                    vacuna.Marca = resultadoVacuna["Marca"].ToString();
+                    vacuna.Dosis = resultadoVacuna["Dosis"].ToString();
+                    vacuna.Fecha_vacuna = DateTime.Parse(resultadoVacuna["Fecha_vacuna"].ToString());
+                    vacuna.Sede = resultadoVacuna["Sede"].ToString();
+                }
+                conexion.Close();
+
+            }
+            catch
+            {
+                vacuna = null;
+            }
+
+            return vacuna;
         }
 
         public List<string> listaMunicipios(int idEstado)

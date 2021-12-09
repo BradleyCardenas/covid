@@ -45,7 +45,7 @@ namespace PlantillaProyecto.Objects
         public string EstadoDomicilio { get => estadoDomicilio; set => estadoDomicilio = value; }
 
 
-       private string generateCurp() {
+       public string generateCurp() {
             string CURP = "";
             //Primera letra del apellido paterno
             CURP += ape_pat.ToUpper().Substring(0, 1);
@@ -93,7 +93,6 @@ namespace PlantillaProyecto.Objects
                 if (consonante != "A" && consonante != "E" && consonante != "I" && consonante != "O" && consonante != "U")
                 {
                     CURP += consonante;
-                    MessageBox.Show("apelllido paterno" + ape_pat + " - " + consonante);
                     break;
                 }
             }
@@ -104,7 +103,6 @@ namespace PlantillaProyecto.Objects
                 if (consonante != "A" && consonante != "E" && consonante != "I" && consonante != "O" && consonante != "U")
                 {
                     CURP += consonante;
-                    MessageBox.Show("apelllido materno" + ape_mat+ " - " + consonante);
                     break;
                 }
             }
@@ -115,7 +113,6 @@ namespace PlantillaProyecto.Objects
                 if (consonante != "A" && consonante != "E" && consonante != "I" && consonante != "O" && consonante != "U")
                 {
                     CURP += consonante;
-                    MessageBox.Show("nombre" + nombre + " - " + consonante);
                     break;
                 }
             }
