@@ -194,7 +194,7 @@ namespace PlantillaProyecto.Classes
         {
             SqlDataReader resultadoDosis;
             List<string> lista = new List<string>();
-            try
+            try  
             {
                 sql = "SELECT Tipo FROM Dosis;";
                 conexion.Open();

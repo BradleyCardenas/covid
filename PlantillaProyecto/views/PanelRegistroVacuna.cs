@@ -23,6 +23,7 @@ namespace PlantillaProyecto.views
         {
             comboMarca_vacuna.DataSource = funciones.listaVacunas();
             comboDosis_vacuna.DataSource = funciones.listaDosis();
+            
         }
 
         public bool hayCamposVacios() {

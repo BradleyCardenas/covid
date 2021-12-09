@@ -8,22 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PlantillaProyecto.Classes;
+
 
 namespace PlantillaProyecto
 {
     public partial class PanelVacuna : Form
     {
+        PeticionSQL funciones = new PeticionSQL();
         public PanelVacuna()
         {
             InitializeComponent();
-            comboMunicipio_vacuna.Enabled = false;
         }
 
-        private void RegistroVacuna_Load(object sender, EventArgs e){
-
+        private void RegistroVacuna_Load(object sender, EventArgs e)
+        {
+            comboMarca_vacuna.DataSource = funciones.listaVacunas();
+            comboDosis_vacuna.DataSource = funciones.listaDosis();
+            comboEstado_vacuna.DataSource = funciones.listaEstados();
         }
-       
-        public Boolean validar_vacios() {
+        private void comboEstado_vacuna_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboMunicipio_vacuna.DataSource = funciones.listaMunicipios(comboEstado_vacuna.SelectedIndex - 1);
+        }
+        public Boolean validar_vacios()
+        {
             Boolean validar = true;
             string msg = "";
 
@@ -88,12 +97,6 @@ namespace PlantillaProyecto
             }
             return validar;
         }
-
-        private void comboEstado_vacuna_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboMunicipio_vacuna.Enabled = true;
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (validar_vacios())
