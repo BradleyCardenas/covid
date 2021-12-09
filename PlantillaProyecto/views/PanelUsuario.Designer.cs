@@ -137,11 +137,15 @@ namespace PlantillaProyecto.views
             // 
             this.comboNacion_registro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboNacion_registro.FormattingEnabled = true;
+            this.comboNacion_registro.Items.AddRange(new object[] {
+            "Mexicano",
+            "Extranjero"});
             this.comboNacion_registro.Location = new System.Drawing.Point(31, 340);
             this.comboNacion_registro.Name = "comboNacion_registro";
             this.comboNacion_registro.Size = new System.Drawing.Size(197, 28);
             this.comboNacion_registro.TabIndex = 64;
             this.comboNacion_registro.Text = "Seleccione";
+            this.comboNacion_registro.SelectedIndexChanged += new System.EventHandler(this.comboNacion_registro_SelectedIndexChanged);
             // 
             // label10
             // 

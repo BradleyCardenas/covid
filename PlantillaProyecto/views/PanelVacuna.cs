@@ -8,61 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PlantillaProyecto.Classes;
+
 
 namespace PlantillaProyecto
 {
     public partial class PanelVacuna : Form
     {
-        //BRADLEY
-        //private SqlConnection conexion = new SqlConnection();
-        //DANIEL
-        private SqlConnection conexion = new SqlConnection();
-        private SqlCommand comando;
-        String sql;
-        public string[] estado = new string[1] {"YUCATÁN"};
-        public string[] municipios = new string[106] { "ABALÁ", "ACANCEH", "AKIL", "BACA", "BOKOBÁ", "BUCTZOTZ", "CACALCHÉN", "CALOTMUL", "CANSAHCAB", "CANTAMAYEC", "CELESTÚN", "CENOTILLO", "CONKAL", "CUNCUNUL", "CUZAMÁ", "CHACSINKÍN", "CHANKOM", "CHAPAB", "CHEMAX", "CHICXULUB PUEBLO", "CHICHIMILÁ", "CHIKINDZONOT", "CHOCHOLÁ", "CHUMAYEL", "DZÁN", "DZEMUL", "DZIDZANTÚN", "DZILAM DE BRAVO", "DZILAM GONZÁLEZ", "DZITÁS", "DZONCAUICH", "ESPITA", "HALACHÓ", "HOCABÁ", "HOCTÚN", "HOMÚN", "HUHÍ", "HUNUCMÁ", "IXIL", "IZAMAL", "KANASÍN", "KANTUNIL", "KAUA", "KINCHIL", "KOPOMÁ", "MAMA", "MANÍ", "MAXCANÚ", "MAYAPÁN", "MÉRIDA", "MOCOCHÁ", "MOTUL", "MUNA", "MUXUPIP", "OPICHÉN", "OXKUTZKAB", "PANABÁ", "PETO", "PROGRESO", "QUINTANA ROO", "RÍO LAGARTOS", "SACALUM", "SAMAHIL", "SANAHCAT", "SAN FELIPE", "SANTA ELENA", "SEYÉ", "SINANCHÉ", "SOTUTA", "SUCILÁ", "SUDZAL", "SUMA", "TAHDZIÚ", "TAHMEK", "TEABO", "TECOH", "TEKAL DE VENEGAS", "TEKANTÓ", "TEKAX", "TEKIT", "TEKOM", "TELCHAC PUEBLO", "TELCHAC PUERTO", "TEMAX", "TEMOZÓN", "TEPAKÁN", "TETIZ", "TEYA", "TICUL", "TIMUCUY", "TINUM", "TIXCACALCUPUL", "TIXKOKOB", "TIXMEHUAC", "TIXPÉHUAL", "TIZIMÍN", "TUNKÁS", "TZUCACAB", "UAYMA", "UCÚ", "UMÁN", "VALLADOLID", "XOCCHEL", "YAXCABÁ", "YAXKUKUL", "YOBAÍN"};
-        public string[] marcas = new string[6] {"Pfizer", "Astrazeneca", "Sputnik V", "Moderna", "Sinovac", "Cansino"};
-        public string[] dosis = new string[4] {"Primera", "Segunda", "Tercera", "Única"};
+        PeticionSQL funciones = new PeticionSQL();
         public PanelVacuna()
         {
             InitializeComponent();
-            llenar_estado();
-            llenar_dosis();
-            llenar_marcas();
-            comboMunicipio_vacuna.Enabled = false;
         }
 
         private void RegistroVacuna_Load(object sender, EventArgs e)
         {
-
+            comboMarca_vacuna.DataSource = funciones.listaVacunas();
+            comboDosis_vacuna.DataSource = funciones.listaDosis();
+            comboEstado_vacuna.DataSource = funciones.listaEstados();
         }
-        public void llenar_estado()
+        private void comboEstado_vacuna_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < estado.Length; i++)
-            {
-                this.comboEstado_vacuna.Items.Add(this.estado[i]);
-            }//Fin del for...
-        }
-        public void llenar_municipios()
-        {
-            for (int i = 0; i < municipios.Length; i++)
-            {
-                this.comboMunicipio_vacuna.Items.Add(this.municipios[i]);
-            }//Fin del for...
-        }
-        public void llenar_marcas()
-        {
-            for (int i = 0; i < marcas.Length; i++)
-            {
-                this.comboMarca_vacuna.Items.Add(this.marcas[i]);
-            }//Fin del for...
-        }
-        public void llenar_dosis()
-        {
-            for (int i = 0; i < dosis.Length; i++)
-            {
-                this.comboDosis_vacuna.Items.Add(this.dosis[i]);
-            }//Fin del for...
+            comboMunicipio_vacuna.DataSource = funciones.listaMunicipios(comboEstado_vacuna.SelectedIndex - 1);
         }
         public Boolean validar_vacios()
         {
@@ -130,13 +97,6 @@ namespace PlantillaProyecto
             }
             return validar;
         }
-
-        private void comboEstado_vacuna_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboMunicipio_vacuna.Enabled = true;
-            llenar_municipios();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (validar_vacios())
